@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    background-image: url(images/graham.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0 80px;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Rubik', sans-serif;
+}
+header h1{
+    margin-bottom: 25px;
+}
+header div{
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+}
+header input{
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    color: hsl(0, 0%, 59%);
+    cursor: pointer;
+}
+header input:focus{
+    outline: none;
+}
+header button{
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: hsl(0, 0%, 17%);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+.ipInput{
+    cursor: text;
+}
+
+/* Details section */
+.details_section{
+    display: flex;
+    width: 70%;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 167px;
+    z-index: 1000;
+}
+.details_section div{
+    width: 25%;
+    padding-left: 15px;
+    position: relative;
+}
+.details_section .line-divider::before{
+    content: "";
+    width: 2px;
+    height: 50px;
+    background-color: hsl(0, 0%, 59%);
+    position: absolute;
+    left: 0;
+}
+.details_section h2{
+    font-size: 8px;
+    color: hsl(0, 0%, 59%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.details_section p{
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+/* Leaflet Map  */
+#map { 
+    height: 80vh;
+}
+
+
+/* Footer  */
+.attribution { 
+    padding: 10px;
+    font-size: 12px; 
+    text-align: center; 
+    z-index: 1000;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    background-color: #FFF;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 10px;
+}
+.attribution a { 
+    color: #1F4690; 
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+}
+
+/* media queries */
+@media(max-width: 800px){
+    header div{
+        margin: 0 auto 50px;
+    }
+    .details_section{
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+        top: 140px;
+    }
+    .details_section div{
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+    .mobile-margin{
+        margin-bottom: 20px;
+    }
+    .details_section .line-divider::before{
+        display: none;
+    }
+}
+
+@media(max-width: 500px){
+    header h1{
+        margin-bottom: 25px;
+        font-size: 1.5rem;
+    }
+    header div{
+        width: 85%;
+    }
+    .details_section{
+        width: 85%;
+    }
+}
